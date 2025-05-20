@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.tcp-container {
+	@apply max-w-[1040px] mx-auto px-4;
+}
+
+/* Buttons */
+.cs-btn {
+	@apply rounded-full bg-white border-2 border-[#02669A] text-[#003450] shadow-[0_5px_0_#02669A] px-10 py-3 font-semibold;
+}
+.cs-btn.--secondary {
+	@apply bg-[#6FCAEF] text-[#02669A];
+}

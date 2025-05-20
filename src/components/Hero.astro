@@ -1,0 +1,31 @@
+---
+import Header from "./Header.astro"
+---
+<section class="bg-[#6FCAEF] relative">
+	<Header />
+	<div class="tcp-container">
+		<div class="grid grid-cols-2">
+			<div class="pt-[80px] pb-[140px]">
+				<div class="flex gap-4 items-center mb-6">
+					<img class="h-[42px]" src="/images/clini-store-clients.webp" alt="CliniStore Clientes">
+					<p class="max-w-[220px] leading-[110%] text-[#003450]">
+						<strong>4.9</strong> Estrellas en Google Reviews <strong>(de +500 reseñas)</strong>
+					</p>
+				</div>
+				<h1 class="text-[60px] font-bold text-[#003450] leading-[90%]">Tu veterinaria en Nordelta</h1>
+				<h4 class="text-white my-4 font-bold text-[22px]">¡Tu compañero de vida se merece lo mejor! </h4>
+				<p class="text-[#003450]">
+					En <strong>Clinistore</strong> nos dedicamos a cuidar a quienes más querés. Atención <strong>veterinaria de calidad, amor y compromiso</strong> para que tu mascota esté siempre sana y feliz.
+				</p>
+				<div class="flex gap-4 mt-8">
+					<a class="cs-btn --secondary" href="#!">Ver servicios</a>
+					<a class="cs-btn" href="#!">¡Coordinar visita!</a>
+				</div>
+			</div>
+			<div class="relative z-30">
+				<img class="absolute object-contain bottom-0 -left-[80px] block w-[calc(100%+80px)] max-w-none h-full" src="/images/clini-store-hero.webp" alt="Clini Store">
+			</div>
+		</div>
+	</div>
+	<div class="w-full absolute bottom-0 z-10 h-[34px] bg-[#02669A] rounded-tr-[20px] rounded-tl-[20px]"></div>
+</section>
