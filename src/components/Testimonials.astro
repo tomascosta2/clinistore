@@ -1,0 +1,74 @@
+---
+const TESTIMONIOS = [
+  {
+    nombre: "María González",
+    texto: "Llevo a mi perrita desde cachorra y siempre la atendieron con muchísimo amor. El equipo es súper profesional y se nota el cariño con el que tratan a los animales. ¡Gracias por cuidar tan bien de Luna!",
+    columna: 1
+  },
+  {
+    nombre: "Julián Romero",
+    texto: "Excelente atención, tanto médica como humana. Mi gato tenía mucho miedo de los veterinarios, pero acá lo supieron tratar con paciencia y respeto. ¡Lo recomiendo 100%!",
+    columna: 2
+  },
+  {
+    nombre: "Carla Fernández",
+    texto: "Adopté a mi perrita con problemas de piel y en esta veterinaria me ayudaron a encontrar el tratamiento justo. Hoy está sana y feliz. Eternamente agradecida ❤️",
+    columna: 3
+  },
+  {
+    nombre: "Esteban Pérez",
+    texto: "Tuve una urgencia un domingo a la noche y me atendieron sin dudar. ¡Un equipo comprometido de verdad! Gracias por salvarle la vida a Tomás.",
+    columna: 1
+  },
+  {
+    nombre: "Lourdes Ibáñez",
+    texto: "La atención es excelente, siempre están atentos a los detalles y te explican todo con mucha claridad. Mis gatos aman venir acá, ¡y eso ya lo dice todo!",
+    columna: 2
+  },
+  {
+    nombre: "Florencia Ríos",
+    texto: "Desde el primer día que llevé a mi perro me sentí contenida y segura. El lugar es impecable y tienen todo lo que uno necesita. ¡Gracias por tanta dedicación!",
+    columna: 3
+  },
+  {
+    nombre: "Natalia Duarte",
+    texto: "Gracias por cuidar de Simba con tanto amor en cada visita. ¡Nos sentimos parte de una gran familia! 🐶💛",
+    columna: 2
+  }
+];
+
+const col1 = TESTIMONIOS.filter(t => t.columna === 1);
+const col2 = TESTIMONIOS.filter(t => t.columna === 2);
+const col3 = TESTIMONIOS.filter(t => t.columna === 3);
+---
+
+<section class="py-[100px] bg-white mx-auto">
+	<div class="tcp-container">
+		<h2 class="font-bold text-[#003450] text-center text-[40px] leading-[100%] max-w-[700px] mx-auto">
+			Cuidando patitas desde 2017
+		</h2>
+		<p class="text-center text-[#003450]/80 max-w-[550px] mx-auto text-[18px] leading-[110%] mt-4 mb-8">
+			Estos son algunos de los comentarios de los dueños de nuestros clientes más especiales
+		</p>
+		<div class="grid md:grid-cols-3 md:gap-4 mt-8">
+			{[col1, col2, col3].map((col) => (
+			<div class="columns-1">
+				{col.map((t) => (
+				<div class="border-1 border-black/20 p-8 rounded-lg mb-4">
+					<div class="flex items-center gap-4">
+						<img class="w-[50px] h-auto rounded-full" src="/images/clini-store-testimonial.jpg" alt="Testimonio">
+						<div>
+							<p class="text-[#111]/80 font-semibold mb-1">{t.nombre}</p>
+							<img class="max-w-[106px]" src="/images/estrellas.png" alt="Estrellas" />
+						</div>
+					</div>
+					<p class="mt-4 text-[#111]/80">“{t.texto}”</p>
+				</div>
+				))}
+			</div>
+			))}
+		</div>
+		<a class="cs-btn block mx-auto w-fit mt-8 shadow-[#003450] border-[#003450]" href="#!">¡Coordinar visita!</a>
+		<p class="text-[14px] text-[#003450]/80 text-center mt-4">¡Esperamos tu mensaje! 🤗</p>
+	</div>
+</section>
