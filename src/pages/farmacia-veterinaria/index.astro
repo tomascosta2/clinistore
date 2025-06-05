@@ -1,0 +1,56 @@
+---
+import ReviewsModule from "../../components/Elements/ReviewsModule.astro";
+import Footer from "../../components/Footer.astro";
+import Header from "../../components/Header.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout>
+	<div class="bg-[#6FCAEF]">
+		<Header />
+		<div class="tcp-container">
+			<section class="pt-[60px] pb-[80px]">
+				<div>
+					<ReviewsModule customClass="justify-center" />
+					<h1 class="text-[40px] text-center font-bold text-[#003450] leading-[90%] mb-4">Farmacia Veterinaria</h1>
+					<p class="text-[#003450] text-center">
+						Farmacia veterinaria especializada
+					</p>
+					<div class="grid md:grid-cols-2 gap-4 mt-8 max-w-[680px] mx-auto">
+						<div class="bg-white border border-[#003450]/30 rounded-[8px] p-8 pb-16">
+							<img src="/images/farmacia-veterinaria-icono-1.svg" alt="Consultas personalizadas">
+							<h3 class="text-[18px] text-[#003450] font-semibold my-4">Consultas personalizadas</h3>
+							<p class="text-[#003450]/80">
+								Descubrí nuestro servicio exclusivo de consultas personalizadas para tu mascota en nuestra Farmacia Veterinaria.
+							</p>
+						</div>
+						<div class="bg-white border border-[#003450]/30 rounded-[8px] p-8 pb-16">
+							<img src="/images/farmacia-veterinaria-icono-2.svg" alt="Cirugías especializadas">
+							<h3 class="text-[18px] text-[#003450] font-semibold my-4">Cirugías especializadas</h3>
+							<p class="text-[#003450]/80">
+								Contamos con un equipo de veterinarios especializados en cirugías para brindar el mejor cuidado a tu mascota. En nuestra clínica veterinaria.							
+							</p>
+						</div>
+						<div class="bg-white border border-[#003450]/30 rounded-[8px] p-8 pb-16">
+							<img src="/images/farmacia-veterinaria-icono-3.svg" alt="Hospitalización segura">
+							<h3 class="text-[18px] text-[#003450] font-semibold my-4">Hospitalización segura</h3>
+							<p class="text-[#003450]/80">
+								En Clinistore, garantizamos un entorno seguro y confortable para la hospitalización de tu mascota.
+							</p>
+						</div>
+						<div class="bg-white border border-[#003450]/30 rounded-[8px] p-8 pb-16">
+							<img src="/images/farmacia-veterinaria-icono-4.svg" alt="Consultas personalizadas">
+							<h3 class="text-[18px] text-[#003450] font-semibold my-4">Internación diurna</h3>
+							<p class="text-[#003450]/80">
+								Ofrecemos un servicio de urgencias las 24 horas para atender cualquier imprevisto que pueda surgir.
+							</p>
+						</div>
+					</div>
+					<a class="cs-btn block mx-auto w-fit mt-8 shadow-[#003450] border-[#003450]" href="#!">¡Coordinar visita!</a>
+					<p class="text-[14px] text-[#003450]/80 text-center mt-4">¡Esperamos tu mensaje! 🤗</p>
+				</div>
+			</section>
+		</div>
+		<Footer />
+	</div>
+</Layout>

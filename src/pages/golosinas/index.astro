@@ -1,0 +1,71 @@
+---
+import ReviewsModule from "../../components/Elements/ReviewsModule.astro";
+import Footer from "../../components/Footer.astro";
+import Header from "../../components/Header.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout>
+	<div class="bg-[#6FCAEF]">
+		<Header />
+		<div class="tcp-container">
+			<section class="pt-[60px] pb-[80px]">
+				<div>
+					<ReviewsModule customClass="justify-center" />
+					<h1 class="text-[40px] text-center font-bold text-[#003450] leading-[90%] mb-4">
+						Juguetes
+					</h1>
+					<p class="text-[#003450] text-center">
+						En nuestra sección de Juguetes, ofrecemos una amplia variedad de opciones para mantener a su mascota entretenida, activa y mentalmente estimulada.
+					</p>
+					<div class="grid md:grid-cols-3 gap-4 mt-8 max-w-[1000px] mx-auto">	
+						<img class="bg-gray-400 rounded-[8px] w-full h-full" src="/images/golosinas.jpg" alt="Golosinas para mascotas">		
+
+						<div class="bg-white border border-[#003450]/30 rounded-[8px] p-8 pb-16">
+							<img src="/images/golosinas-icono-1.svg" alt="Golosinas Naturales">
+							<h3 class="text-[18px] text-[#003450] font-semibold my-4">Golosinas Naturales</h3>
+							<p class="text-[#003450]/80">
+								Hechas con ingredientes frescos y sin aditivos artificiales, estas golosinas son saludables y seguras, perfectas para proporcionar un snack natural a su mascota.
+							</p>
+						</div>
+
+						<div class="bg-white border border-[#003450]/30 rounded-[8px] p-8 pb-16">
+							<img src="/images/golosinas-icono-2.svg" alt="Golosinas Médicas">
+							<h3 class="text-[18px] text-[#003450] font-semibold my-4">Golosinas Medicas</h3>
+							<p class="text-[#003450]/80">
+								Formuladas específicamente para tratar y prevenir problemas de salud, estas golosinas ayudan a mantener a su mascota sana mientras disfruta de un sabroso premio.
+							</p>
+						</div>
+
+						<div class="bg-white border border-[#003450]/30 rounded-[8px] p-8 pb-16">
+							<img src="/images/golosinas-icono-3.svg" alt="Golosinas Dentales">
+							<h3 class="text-[18px] text-[#003450] font-semibold my-4">Golosinas Dentales</h3>
+							<p class="text-[#003450]/80">
+								Diseñadas para mejorar la salud bucal, estas golosinas ayudan a reducir la acumulación de placa y sarro, promoviendo dientes y encías saludables.
+							</p>
+						</div>
+
+						<div class="bg-white border border-[#003450]/30 rounded-[8px] p-8 pb-16">
+							<img src="/images/golosinas-icono-4.svg" alt="Golosinas Saludables">
+							<h3 class="text-[18px] text-[#003450] font-semibold my-4">Golosinas Saludables</h3>
+							<p class="text-[#003450]/80">
+								Bajos en calorías y ricos en nutrientes, estas golosinas son ideales para mascotas con necesidades dietéticas especiales o para mantener un peso saludable.
+							</p>
+						</div>
+
+						<div class="bg-white border border-[#003450]/30 rounded-[8px] p-8 pb-16">
+							<img src="/images/golosinas-icono-5.svg" alt="Golosinas para Entrenamiento de Cachorros">
+							<h3 class="text-[18px] text-[#003450] font-semibold my-4">Golosinas para Entrenamiento de Cachorros</h3>
+							<p class="text-[#003450]/80">
+								Pequeñas y sabrosas, estas golosinas son perfectas para entrenar a su cachorro, facilitando el aprendizaje de nuevos comandos y comportamientos deseables.
+							</p>
+						</div>
+					</div>
+					<a class="cs-btn block mx-auto w-fit mt-8 shadow-[#003450] border-[#003450]" href="#!">¡Coordinar visita!</a>
+					<p class="text-[14px] text-[#003450]/80 text-center mt-4">¡Esperamos tu mensaje! 🤗</p>
+				</div>
+			</section>
+		</div>
+		<Footer />
+	</div>
+</Layout>

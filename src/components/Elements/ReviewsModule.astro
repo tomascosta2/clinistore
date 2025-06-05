@@ -1,0 +1,16 @@
+---
+const { customClass } = Astro.props;
+---
+
+<div class={`flex md:flex-row flex-col gap-4 items-center mb-6 ${customClass}`}>
+	<img
+		class="h-[42px]"
+		src="/images/clini-store-clients.webp"
+		alt="CliniStore Clientes"
+	/>
+	<p class="max-w-[220px] text-start md:text-center leading-[110%] text-[#003450]">
+		<strong>4.9</strong> Estrellas en Google Reviews <strong
+			>(de +500 reseñas)</strong
+		>
+	</p>
+</div>

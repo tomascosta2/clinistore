@@ -1,0 +1,63 @@
+---
+import ReviewsModule from "../../components/Elements/ReviewsModule.astro";
+import Footer from "../../components/Footer.astro";
+import Header from "../../components/Header.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout>
+	<div class="bg-[#6FCAEF]">
+		<Header />
+		<div class="tcp-container">
+			<section class="pt-[60px] pb-[80px]">
+				<div>
+					<ReviewsModule customClass="justify-center" />
+					<h1 class="text-[40px] text-center font-bold text-[#003450] leading-[90%] mb-4">
+						Juguetes
+					</h1>
+					<p class="text-[#003450] text-center">
+						En nuestra sección de Juguetes, ofrecemos una amplia variedad de opciones para mantener a su mascota entretenida, activa y mentalmente estimulada.
+					</p>
+					<div class="grid md:grid-cols-3 gap-4 mt-8 max-w-[1000px] mx-auto">	
+						<img class="bg-gray-400 rounded-[8px] w-full h-full row-span-2" src="/images/juguetes.jpg" alt="Juguetes para mascotas">		
+
+						<div class="bg-white border border-[#003450]/30 rounded-[8px] p-8 pb-16">
+							<img src="/images/juguetes-icono-1.svg" alt="Juguetes Nacionales">
+							<h3 class="text-[18px] text-[#003450] font-semibold my-4">Juguetes Nacionales</h3>
+							<p class="text-[#003450]/80">
+								Fabricados localmente con materiales de alta calidad, estos juguetes son duraderos y seguros, ideales para juegos diarios y actividades recreativas.
+							</p>
+						</div>
+
+						<div class="bg-white border border-[#003450]/30 rounded-[8px] p-8 pb-16">
+							<img src="/images/juguetes-icono-2.svg" alt="Juguetes Importados">
+							<h3 class="text-[18px] text-[#003450] font-semibold my-4">Juguetes Importados</h3>
+							<p class="text-[#003450]/80">
+								Traídos de las mejores marcas internacionales, estos juguetes ofrecen innovación y calidad superior, proporcionando opciones únicas y atractivas para su mascota.
+							</p>
+						</div>
+
+						<div class="bg-white border border-[#003450]/30 rounded-[8px] p-8 pb-16">
+							<img src="/images/juguetes-icono-3.svg" alt="Juguetes Automatizados">
+							<h3 class="text-[18px] text-[#003450] font-semibold my-4">Juguetes Automatizados</h3>
+							<p class="text-[#003450]/80">
+								Juguetes Automatizados para recreación felina: diseñados específicamente para gatos, estos juguetes interactivos y automatizados mantienen a su felino entretenido y ejercitado, estimulando su instinto de caza y curiosidad natural.
+							</p>
+						</div>
+
+						<div class="bg-white border border-[#003450]/30 rounded-[8px] p-8 pb-16">
+							<img src="/images/juguetes-icono-4.svg" alt="Juguetes Específicos para Ansiedad">
+							<h3 class="text-[18px] text-[#003450] font-semibold my-4">Juguetes Específicos para Ansiedad</h3>
+							<p class="text-[#003450]/80">
+								Productos diseñados para ayudar a reducir el estrés y la ansiedad en mascotas, proporcionándoles una forma segura de liberar energía y mantenerse calmadas.
+							</p>
+						</div>
+					</div>
+					<a class="cs-btn block mx-auto w-fit mt-8 shadow-[#003450] border-[#003450]" href="#!">¡Coordinar visita!</a>
+					<p class="text-[14px] text-[#003450]/80 text-center mt-4">¡Esperamos tu mensaje! 🤗</p>
+				</div>
+			</section>
+		</div>
+		<Footer />
+	</div>
+</Layout>

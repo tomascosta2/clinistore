@@ -1,0 +1,71 @@
+---
+import ReviewsModule from "../../components/Elements/ReviewsModule.astro";
+import Footer from "../../components/Footer.astro";
+import Header from "../../components/Header.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout>
+	<div class="bg-[#6FCAEF]">
+		<Header />
+		<div class="tcp-container pt-[60px] pb-[80px]">
+			<div class="bg-[url('/images/tramites-portada.jpg')] bg-cover py-16 flex items-center justify-center rounded-[8px]">
+				<h1 class="text-center text-[40px] font-bold text-white">Trámites</h1>
+			</div>
+			<div class="grid md:grid-cols-3 gap-4 mt-4 max-w-[1000px] mx-auto">
+				<div class="bg-white border border-[#003450]/30 rounded-[8px] p-8 pb-16">
+					<img src="/images/tramites-icono-1.svg" alt="Trámites para Viajes y Accesorios de Transporte con Normas IATA">
+					<h3 class="text-[18px] text-[#003450] font-semibold my-4">Trámites para Viajes y Accesorios de Transporte con Normas IATA</h3>
+					<p class="text-[#003450]/80">
+						Asesoramiento y gestión de documentos necesarios para viajar con su mascota, además de jaulas y transportadores aprobados por las normas internacionales.
+					</p>
+				</div>
+				<div class="bg-white border border-[#003450]/30 rounded-[8px] p-8 pb-16">
+					<img src="/images/tramites-icono-2.svg" alt="Accesorios de Paseo">
+					<h3 class="text-[18px] text-[#003450] font-semibold my-4">Accesorios de Paseo</h3>
+					<p class="text-[#003450]/80">
+						Correas, collares, arneses y otros productos diseñados para garantizar paseos seguros y cómodos para su mascota.
+					</p>
+				</div>
+				<div class="bg-white border border-[#003450]/30 rounded-[8px] p-8 pb-16">
+					<img src="/images/tramites-icono-3.svg" alt="Accesorios de Entrenamiento">
+					<h3 class="text-[18px] text-[#003450] font-semibold my-4">Accesorios de Entrenamiento</h3>
+					<p class="text-[#003450]/80">
+						Herramientas y equipos para el adiestramiento eficaz de su mascota, ayudando a mejorar su comportamiento y obediencia.
+					</p>
+				</div>
+			</div>
+
+			<!-- ACCESORIOS -->
+			 <div class="bg-[url('/images/accesorios-portada.jpg')] bg-cover py-16 flex items-center justify-center rounded-[8px] mt-8">
+				<h1 class="text-center text-[40px] font-bold text-white">Accesorios</h1>
+			</div>
+			<div class="grid md:grid-cols-3 gap-4 mt-4 max-w-[1000px] mx-auto">
+				<div class="bg-white border border-[#003450]/30 rounded-[8px] p-8 pb-16">
+					<img src="/images/accesorios-icono-1.svg" alt="Accesorios de Ocio y Recreación">
+					<h3 class="text-[18px] text-[#003450] font-semibold my-4">Accesorios de Ocio y Recreación</h3>
+					<p class="text-[#003450]/80">
+						Productos para el entretenimiento de su mascota, como túneles, camas y rascadores, que aseguran su diversión y bienestar.
+					</p>
+				</div>
+
+				<div class="bg-white border border-[#003450]/30 rounded-[8px] p-8 pb-16">
+					<img src="/images/accesorios-icono-2.svg" alt="Juguetes">
+					<h3 class="text-[18px] text-[#003450] font-semibold my-4">Juguetes</h3>
+					<p class="text-[#003450]/80">
+						Variedad de juguetes nacionales e importados, incluyendo juguetes automatizados para gatos, juguetes para la ansiedad, y juguetes específicos para cachorros.
+					</p>
+				</div>
+
+				<div class="bg-white border border-[#003450]/30 rounded-[8px] p-8 pb-16">
+					<img src="/images/accesorios-icono-3.svg" alt="Golosinas">
+					<h3 class="text-[18px] text-[#003450] font-semibold my-4">Golosinas</h3>
+					<p class="text-[#003450]/80">
+						Selección de golosinas naturales, medicadas, dentales y saludables, perfectas para premiar a su mascota y mantener su salud dental y general.
+					</p>
+				</div>
+			</div>
+		</div>
+		<Footer />
+	</div>
+</Layout>
