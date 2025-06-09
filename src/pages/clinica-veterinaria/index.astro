@@ -6,51 +6,133 @@ import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout>
-	<div class="bg-[#6FCAEF]">
-		<Header />
-		<div class="tcp-container">
-			<section class="py-[80px]">
-				<div class="grid grid-cols-2 gap-8">
-					<div>
-						<ReviewsModule />
-						<h1 class="text-[40px] font-bold text-[#003450] leading-[90%] mb-8">CLÍNICA VETERINARIA</h1>
-						<p class="text-[#003450]">
-							Bienvenidos a Clinistore, donde el cuidado de tu mascota es nuestra prioridad.
-							<br><br>
-							En Clinistore, no solo somos un petshop con peluqueria canina, también somos una clínica veterinaria con un equipo de médicos veterinarios altamente capacitados, dedicadas a ofrecer el mejor cuidado para tu mascota.
-						</p>
-					</div>
-					<img class="w-full h-[330px] rounded-[16px] bg-gray-400 shadow-[16px_16px_0_#02669A]" src="" alt="">
-				</div>
-			</section>
-			<section class="text-center pt-[40px] pb-[80px] px-4 max-w-6xl mx-auto">
-				<h2 class="text-[28px] md:text-[30px] font-semibold max-w-[600px] leading-[95%] mx-auto text-[#003450] mb-2">
-					En Clinistore, cuidamos de tu mascota como si fuera nuestra.
-				</h2>
-				<p class="text-[#003450] text-[16px] md:text-[18px] max-w-[500px] mx-auto mb-10">
-					¡Confiamos su salud y bienestar, estamos acá para darte el cuidado que se merece!
-				</p>
-				<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-					<div class="bg-white p-4 rounded-lg shadow text-[#003450] flex justify-center items-center">Clínica Veterinaria</div>
-					<div class="bg-white p-4 rounded-lg shadow text-[#003450] flex justify-center items-center">Consulta</div>
-					<div class="bg-white p-4 rounded-lg shadow text-[#003450] flex justify-center items-center">Control</div>
-					<div class="bg-white p-4 rounded-lg shadow text-[#003450] flex justify-center items-center">Vacunación</div>
-					<div class="bg-white p-4 rounded-lg shadow text-[#003450] flex justify-center items-center">Tratamiento de heridas</div>
-					<div class="bg-white p-4 rounded-lg shadow text-[#003450] flex justify-center items-center">Tratamiento de afecciones en general</div>
-					<div class="bg-white p-4 rounded-lg shadow text-[#003450] flex justify-center items-center">Castraciones simples y complejas</div>
-					<div class="bg-white p-4 rounded-lg shadow text-[#003450] flex justify-center items-center">Estudios médicos</div>
-					<div class="bg-white p-4 rounded-lg shadow text-[#003450] flex justify-center items-center">Ecografías</div>
-					<div class="bg-white p-4 rounded-lg shadow text-[#003450] flex justify-center items-center">Cardiología general / Radiografías</div>
-					<div class="bg-white p-4 rounded-lg shadow text-[#003450] flex justify-center items-center">Laboratorio</div>
-					<div class="bg-white p-4 rounded-lg shadow text-[#003450] flex justify-center items-center">Análisis de sangre completos</div>
-					<div class="bg-white p-4 rounded-lg shadow text-[#003450] flex justify-center items-center">Estudios prequirúrgicos</div>
-					<div class="bg-white p-4 rounded-lg shadow text-[#003450] flex justify-center items-center">Equipo profesional de atención veterinaria</div>
-					<div class="bg-white p-4 rounded-lg shadow text-[#003450] flex justify-center items-center">Asesoramiento general en toda clase de rubros</div>
-				</div>
-				<a class="cs-btn block mx-auto w-fit mt-8 shadow-[#003450] border-[#003450]" href="#!">¡Coordinar visita!</a>
-				<p class="text-[14px] text-[#003450]/80 text-center mt-4">¡Esperamos tu mensaje! 🤗</p>
-			</section>
-		</div>
-		<Footer />
-	</div>
+  <div class="bg-[#6FCAEF]">
+    <Header />
+    <div class="tcp-container">
+      <section class="py-[80px]">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="">
+            <ReviewsModule />
+            <h1 class="text-[40px] font-bold text-[#003450] leading-[90%] mb-8">
+              CLÍNICA VETERINARIA
+            </h1>
+            <p class="text-[#003450]">
+              Bienvenidos a Clinistore, donde el cuidado de tu mascota es
+              nuestra prioridad.
+              <br /><br />
+              En Clinistore, no solo somos un petshop con peluqueria canina, también
+              somos una clínica veterinaria con un equipo de médicos veterinarios
+              altamente capacitados, dedicadas a ofrecer el mejor cuidado para tu
+              mascota.
+            </p>
+          </div>
+          <div class="mr-4">
+            <img
+              class="w-full h-[330px] rounded-[16px] bg-gray-400 shadow-[16px_16px_0_#02669A] object-cover"
+              src="/images/clinica-veterinaria.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+      <section class="text-center pt-[40px] pb-[80px] px-4 max-w-6xl mx-auto">
+        <h2
+          class="text-[28px] md:text-[30px] font-semibold max-w-[600px] leading-[95%] mx-auto text-[#003450] mb-2"
+        >
+          En Clinistore, cuidamos de tu mascota como si fuera nuestra.
+        </h2>
+        <p
+          class="text-[#003450] text-[16px] md:text-[18px] max-w-[500px] mx-auto mb-10"
+        >
+          ¡Confiamos su salud y bienestar, estamos acá para darte el cuidado que
+          se merece!
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <div
+            class="bg-white p-4 rounded-lg shadow text-[#003450] flex justify-center items-center"
+          >
+            Clínica Veterinaria
+          </div>
+          <div
+            class="bg-white p-4 rounded-lg shadow text-[#003450] flex justify-center items-center"
+          >
+            Consulta
+          </div>
+          <div
+            class="bg-white p-4 rounded-lg shadow text-[#003450] flex justify-center items-center"
+          >
+            Control
+          </div>
+          <div
+            class="bg-white p-4 rounded-lg shadow text-[#003450] flex justify-center items-center"
+          >
+            Vacunación
+          </div>
+          <div
+            class="bg-white p-4 rounded-lg shadow text-[#003450] flex justify-center items-center"
+          >
+            Tratamiento de heridas
+          </div>
+          <div
+            class="bg-white p-4 rounded-lg shadow text-[#003450] flex justify-center items-center"
+          >
+            Tratamiento de afecciones en general
+          </div>
+          <div
+            class="bg-white p-4 rounded-lg shadow text-[#003450] flex justify-center items-center"
+          >
+            Castraciones simples y complejas
+          </div>
+          <div
+            class="bg-white p-4 rounded-lg shadow text-[#003450] flex justify-center items-center"
+          >
+            Estudios médicos
+          </div>
+          <div
+            class="bg-white p-4 rounded-lg shadow text-[#003450] flex justify-center items-center"
+          >
+            Ecografías
+          </div>
+          <div
+            class="bg-white p-4 rounded-lg shadow text-[#003450] flex justify-center items-center"
+          >
+            Cardiología general / Radiografías
+          </div>
+          <div
+            class="bg-white p-4 rounded-lg shadow text-[#003450] flex justify-center items-center"
+          >
+            Laboratorio
+          </div>
+          <div
+            class="bg-white p-4 rounded-lg shadow text-[#003450] flex justify-center items-center"
+          >
+            Análisis de sangre completos
+          </div>
+          <div
+            class="bg-white p-4 rounded-lg shadow text-[#003450] flex justify-center items-center"
+          >
+            Estudios prequirúrgicos
+          </div>
+          <div
+            class="bg-white p-4 rounded-lg shadow text-[#003450] flex justify-center items-center"
+          >
+            Equipo profesional de atención veterinaria
+          </div>
+          <div
+            class="bg-white p-4 rounded-lg shadow text-[#003450] flex justify-center items-center"
+          >
+            Asesoramiento general en toda clase de rubros
+          </div>
+        </div>
+        <a
+          class="cs-btn block mx-auto w-fit mt-8 shadow-[#003450] border-[#003450]"
+          href="#!">¡Coordinar visita!</a
+        >
+        <p class="text-[14px] text-[#003450]/80 text-center mt-4">
+          ¡Esperamos tu mensaje! 🤗
+        </p>
+      </section>
+    </div>
+    <Footer />
+  </div>
 </Layout>

@@ -6,65 +6,127 @@ import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout>
-	<div class="bg-[#6FCAEF]">
-		<Header />
-		<div class="tcp-container">
-			<section class="pt-[60px] pb-[80px]">
-				<div>
-					<ReviewsModule customClass="justify-center" />
-					<h1 class="text-[40px] text-center font-bold text-[#003450] leading-[90%] mb-4">
-						Alimentos y Nutrición
-					</h1>
-					<p class="text-[#003450] text-center">
-						En nuestra sección de alimentos y nutrición, ofrecemos una amplia gama de productos diseñados para satisfacer las necesidades dietéticas y de salud de su mascota.
-					</p>
-					<div class="grid md:grid-cols-3 gap-4 mt-8 max-w-[1000px] mx-auto">
-						<div class="col-span-3 grid md:grid-cols-2 gap-4">
-							<img class="w-full rounded-[8px] bg-gray-400 h-[160px]" src="/images/alimentos-y-nutricion-1.jpg" alt="Alimentos y nutricion Clinistore">
-							<img class="w-full rounded-[8px] bg-gray-400 h-[160px]" src="/images/alimentos-y-nutricion-2.jpg" alt="Alimentos y nutricion Clinistore">
-						</div>
-						<div class="bg-white border border-[#003450]/30 rounded-[8px] p-8 pb-16">
-							<img src="/images/alimentos-y-nutricion-icono-1.svg" alt="Consultas personalizadas">
-							<h3 class="text-[18px] text-[#003450] font-semibold my-4">Cambiar</h3>
-							<p class="text-[#003450]/80">
-								Cambiar
-							</p>
-						</div>
-						<div class="bg-white border border-[#003450]/30 rounded-[8px] p-8 pb-16">
-							<img src="/images/alimentos-y-nutricion-icono-2.svg" alt="Alimentos Específicos de Raza">
-							<h3 class="text-[18px] text-[#003450] font-semibold my-4">Alimentos Específicos de Raza</h3>
-							<p class="text-[#003450]/80">
-								Diseñados para satisfacer las necesidades nutricionales particulares de diferentes razas.
-							</p>
-						</div>
-						<div class="bg-white border border-[#003450]/30 rounded-[8px] p-8 pb-16">
-							<img src="/images/alimentos-y-nutricion-icono-3.svg" alt="Alimentos para Sobrepeso">
-							<h3 class="text-[18px] text-[#003450] font-semibold my-4">Alimentos para Sobrepeso</h3>
-							<p class="text-[#003450]/80">
-								Opciones bajas en calorías y ricas en nutrientes para ayudar a su mascota a mantener un peso saludable sin sacrificar el sabor ni la calidad.
-							</p>
-						</div>
-						<div class="bg-white border border-[#003450]/30 rounded-[8px] p-8 pb-16">
-							<img src="/images/alimentos-y-nutricion-icono-4.svg" alt="Consultas personalizadas">
-							<h3 class="text-[18px] text-[#003450] font-semibold my-4">Alimentos para Alergias</h3>
-							<p class="text-[#003450]/80">
-								Fórmulas hipoalergénicas que minimizan las reacciones adversas y son ideales para mascotas con sensibilidades alimentarias.
-							</p>
-						</div>
-						<div class="bg-white border border-[#003450]/30 rounded-[8px] p-8 pb-16">
-							<img src="/images/alimentos-y-nutricion-icono-5.svg" alt="Consultas personalizadas">
-							<h3 class="text-[18px] text-[#003450] font-semibold my-4">Alimentos para Adultos Mayores</h3>
-							<p class="text-[#003450]/80">
-								Formulados para satisfacer las necesidades nutricionales de mascotas mayores, apoyando la salud de las articulaciones, la función cognitiva y el bienestar general.
-							</p>
-						</div>
-						<img class="bg-gray-400 rounded-[8px] w-full h-full" src="/images/alimentos-y-nutricion-3.jpg" alt="">
-					</div>
-					<a class="cs-btn block mx-auto w-fit mt-8 shadow-[#003450] border-[#003450]" href="#!">¡Coordinar visita!</a>
-					<p class="text-[14px] text-[#003450]/80 text-center mt-4">¡Esperamos tu mensaje! 🤗</p>
-				</div>
-			</section>
-		</div>
-		<Footer />
-	</div>
+  <div class="bg-[#6FCAEF]">
+    <Header />
+    <div class="tcp-container">
+      <section class="pt-[60px] pb-[80px]">
+        <div>
+          <ReviewsModule customClass="justify-center" />
+          <h1
+            class="text-[40px] text-center font-bold text-[#003450] leading-[90%] mb-4"
+          >
+            Alimentos y Nutrición
+          </h1>
+          <p class="text-[#003450] text-center">
+            En nuestra sección de alimentos y nutrición, ofrecemos una amplia
+            gama de productos diseñados para satisfacer las necesidades
+            dietéticas y de salud de su mascota.
+          </p>
+          <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8 max-w-[1000px] mx-auto"
+          >
+            <div class="col-span-1 md:col-span-3 grid md:grid-cols-2 gap-4">
+              <img
+                class="w-full rounded-[8px] bg-gray-400 h-[160px]"
+                src="/images/alimentos-y-nutricion-1.jpg"
+                alt="Alimentos y nutricion Clinistore"
+              />
+              <img
+                class="w-full rounded-[8px] bg-gray-400 h-[160px]"
+                src="/images/alimentos-y-nutricion-2.jpg"
+                alt="Alimentos y nutricion Clinistore"
+              />
+            </div>
+            <div
+              class="bg-white border border-[#003450]/30 rounded-[8px] p-8 pb-16"
+            >
+              <img
+                src="/images/alimentos-y-nutricion-icono-1.svg"
+                alt="Consultas personalizadas"
+              />
+              <h3 class="text-[18px] text-[#003450] font-semibold my-4">
+                Cambiar
+              </h3>
+              <p class="text-[#003450]/80">Cambiar</p>
+            </div>
+            <div
+              class="bg-white border border-[#003450]/30 rounded-[8px] p-8 pb-16"
+            >
+              <img
+                src="/images/alimentos-y-nutricion-icono-2.svg"
+                alt="Alimentos Específicos de Raza"
+              />
+              <h3 class="text-[18px] text-[#003450] font-semibold my-4">
+                Alimentos Específicos de Raza
+              </h3>
+              <p class="text-[#003450]/80">
+                Diseñados para satisfacer las necesidades nutricionales
+                particulares de diferentes razas.
+              </p>
+            </div>
+            <div
+              class="bg-white border border-[#003450]/30 rounded-[8px] p-8 pb-16"
+            >
+              <img
+                src="/images/alimentos-y-nutricion-icono-3.svg"
+                alt="Alimentos para Sobrepeso"
+              />
+              <h3 class="text-[18px] text-[#003450] font-semibold my-4">
+                Alimentos para Sobrepeso
+              </h3>
+              <p class="text-[#003450]/80">
+                Opciones bajas en calorías y ricas en nutrientes para ayudar a
+                su mascota a mantener un peso saludable sin sacrificar el sabor
+                ni la calidad.
+              </p>
+            </div>
+            <div
+              class="bg-white border border-[#003450]/30 rounded-[8px] p-8 pb-16"
+            >
+              <img
+                src="/images/alimentos-y-nutricion-icono-4.svg"
+                alt="Consultas personalizadas"
+              />
+              <h3 class="text-[18px] text-[#003450] font-semibold my-4">
+                Alimentos para Alergias
+              </h3>
+              <p class="text-[#003450]/80">
+                Fórmulas hipoalergénicas que minimizan las reacciones adversas y
+                son ideales para mascotas con sensibilidades alimentarias.
+              </p>
+            </div>
+            <div
+              class="bg-white border border-[#003450]/30 rounded-[8px] p-8 pb-16"
+            >
+              <img
+                src="/images/alimentos-y-nutricion-icono-5.svg"
+                alt="Consultas personalizadas"
+              />
+              <h3 class="text-[18px] text-[#003450] font-semibold my-4">
+                Alimentos para Adultos Mayores
+              </h3>
+              <p class="text-[#003450]/80">
+                Formulados para satisfacer las necesidades nutricionales de
+                mascotas mayores, apoyando la salud de las articulaciones, la
+                función cognitiva y el bienestar general.
+              </p>
+            </div>
+            <img
+              class="bg-gray-400 rounded-[8px] w-full h-full"
+              src="/images/alimentos-y-nutricion-3.jpg"
+              alt=""
+            />
+          </div>
+          <a
+            class="cs-btn block mx-auto w-fit mt-8 shadow-[#003450] border-[#003450]"
+            href="#!">¡Coordinar visita!</a
+          >
+          <p class="text-[14px] text-[#003450]/80 text-center mt-4">
+            ¡Esperamos tu mensaje! 🤗
+          </p>
+        </div>
+      </section>
+    </div>
+    <Footer />
+  </div>
 </Layout>

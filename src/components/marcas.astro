@@ -1,0 +1,125 @@
+---
+const brands = [
+  { name: "Royal Canin", logo: "/images/marcas/royal-canin.webp" },
+  { name: "Pro Plan", logo: "/images/marcas/pro-plan.webp" },
+  { name: "Purina", logo: "/images/marcas/purina.webp" },
+  { name: "Eukanuba", logo: "/images/marcas/eukanuba.png" },
+  { name: "Kong", logo: "/images/marcas/kong.webp" },
+  { name: "Mon Ami", logo: "/images/marcas/mon-ami.webp" },
+  { name: "Dingo", logo: "/images/marcas/dingo.webp" },
+  { name: "Can Cat", logo: "/images/marcas/can-cat.webp" },
+  { name: "Purina Excellent", logo: "/images/marcas/purina-excelent.webp" },
+  { name: "Old Prince", logo: "/images/marcas/old-prince.webp" },
+];
+
+// InfiniteSlider props equivalent
+const gap = 24; // gap between items in pixels
+const speed = 100; // normal speed in pixels per second
+const speedOnHover = 20; // speed when hovered in pixels per second
+
+// Create enough copies for truly seamless infinite effect
+const infiniteBrands = [...brands, ...brands, ...brands, ...brands];
+---
+
+<section class="pt-[66px] pb-[100px] bg-[#02669A] overflow-hidden">
+  <div class="tcp-container">
+    <h2
+      class="font-semibold text-white text-center text-[32px] md:text-[42px] leading-[100%] max-w-[700px] mx-auto"
+    >
+      Trabajamos con las mejores marcas del mercado
+    </h2>
+    <p
+      class="text-center text-white/80 max-w-[550px] mx-auto text-[18px] leading-[110%] mt-4 mb-12 px-4"
+    >
+      Ofrecemos productos de calidad premium de marcas reconocidas mundialmente
+      para el cuidado y bienestar de tu mascota.
+    </p>
+
+    <!-- Motion-Primitives Style Infinite Slider -->
+    <div class="infinite-slider">
+      <div class="slider-content">
+        {
+          infiniteBrands.map((brand, index) => (
+            <div class="slider-item">
+              <img
+                src={brand.logo}
+                alt={brand.name}
+                class="aspect-square w-[120px] md:w-[140px] h-[120px] md:h-[140px] object-contain rounded-lg bg-white p-4 shadow-lg hover:shadow-xl transition-shadow duration-300 filter grayscale hover:grayscale-0"
+                loading="lazy"
+              />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<style
+  define:vars={{
+    gap: `${gap}px`,
+    speed: `${speed}`,
+    speedOnHover: `${speedOnHover}`,
+  }}
+>
+  .infinite-slider {
+    overflow: hidden;
+    mask: linear-gradient(
+      to right,
+      transparent,
+      white 20%,
+      white 80%,
+      transparent
+    );
+    -webkit-mask: linear-gradient(
+      to right,
+      transparent,
+      white 20%,
+      white 80%,
+      transparent
+    );
+  }
+
+  .slider-content {
+    display: flex;
+    gap: var(--gap);
+    width: max-content;
+    animation: infiniteSlide 80s linear infinite;
+    will-change: transform;
+  }
+
+  .slider-item {
+    flex-shrink: 0;
+    user-select: none;
+  }
+
+  @keyframes infiniteSlide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-25%);
+    }
+  }
+
+  /* Hover state with slower speed - no reset */
+  .infinite-slider:hover .slider-content {
+    animation-play-state: paused;
+  }
+
+  @media (max-width: 768px) {
+    .slider-item img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .slider-content {
+      gap: 16px;
+      animation-duration: 60s;
+    }
+
+    .infinite-slider:hover .slider-content {
+      animation-duration: 90s;
+    }
+  }
+</style>

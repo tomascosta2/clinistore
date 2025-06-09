@@ -2,62 +2,76 @@
 const faqs = [
   {
     pregunta: "¿Qué servicios veterinarios ofrecen?",
-    respuesta: "Ofrecemos servicios como baño y peluquería, consultas médicas con profesionales, internación diurna y mucho más!"
+    respuesta:
+      "Ofrecemos servicios como baño y peluquería, consultas médicas con profesionales, internación diurna y mucho más!",
   },
   {
-    pregunta: "¿Cuáles son los horarios de atención para consultas veterinarias?",
-    respuesta: "Nos encontramos de 8:00hs a 20:00hs todos los días"
+    pregunta:
+      "¿Cuáles son los horarios de atención para consultas veterinarias?",
+    respuesta: "Nos encontramos de 8:00hs a 20:00hs todos los días",
   },
   {
     pregunta: "¿Realizan cirugías?",
-    respuesta: "Sí, si tenes alguna urgencia no dudes en asistir a nuestros locales"
+    respuesta:
+      "Sí, si tenes alguna urgencia no dudes en asistir a nuestros locales",
   },
   {
     pregunta: "¿Ofrecen servicios de vacunación y desparasitación?",
-    respuesta: "Sí, ofrecemos ese servicio"
+    respuesta: "Sí, ofrecemos ese servicio",
   },
   {
-    pregunta: "¿Realizan estudios de diagnóstico, como radiografías o análisis de sangre?",
-    respuesta: "Sí, realizamos estudios"
+    pregunta:
+      "¿Realizan estudios de diagnóstico, como radiografías o análisis de sangre?",
+    respuesta: "Sí, realizamos estudios",
   },
   {
     pregunta: "¿Cómo puedo contactar con la clínica en caso de emergencia?",
-    respuesta: "Nos podes contactar a este numero +54 9 11 61439669"
+    respuesta: "Nos podes contactar a este numero +54 9 11 61439669",
   },
   {
     pregunta: "¿Cuáles son los métodos de pago aceptados?",
-    respuesta: "Aceptamos todos los medios de pago, efectivo, transferencia, tarjeta de débito/crédito"
+    respuesta:
+      "Aceptamos todos los medios de pago, efectivo, transferencia, tarjeta de débito/crédito",
   },
 ];
-
 ---
 
-<section id="faqs" class="relative py-[60px] lg:py-[80px] px-4 bg-[#02669A]">
-    <h2 class="text-[32px] text-white md:text-[42px] font-semibold mb-4 text-center">Preguntas Frecuentes</h2>
-    <div class="max-w-[800px] mx-auto" id="faq-container">
-      {
-        faqs.map((item, index) => (
-          <div
-            class="faq-item w-full cursor-pointer p-[20px] border-b border-b-white/50 last:border-b-0"
-            data-index={index}
-          >
-            <h3 class="faq-question font-semibold text-[18px] md:text-[20px] text-white flex justify-between items-center">
-              {item.pregunta}
-              <svg class="faq-icon min-w-[20px] size-[20px] transition-all duration-300" fill="#FFF" viewBox="0 0 448 512"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>
-            </h3>
-            <div class="faq-answer normal-case overflow-hidden duration-500 transition-all max-h-0">
-              <p class="text-white/80 text-[18px] pt-[10px]">{item.respuesta}</p>
-            </div>
+<section id="faqs" class="relative py-[60px] lg:py-[80px] px-4 bg-white">
+  <h2
+    class="text-[32px] text-[#003450] md:text-[42px] font-semibold mb-4 text-center"
+  >
+    Preguntas Frecuentes
+  </h2>
+  <div class="max-w-[800px] mx-auto" id="faq-container">
+    {
+      faqs.map((item, index) => (
+        <div
+          class="faq-item w-full cursor-pointer p-[20px] border-b border-b-[#003450]/50 last:border-b-0"
+          data-index={index}>
+          <h3 class="faq-question font-semibold text-[18px] md:text-[20px] text-[#003450] flex justify-between items-center">
+            {item.pregunta}
+            <svg
+              class="faq-icon min-w-[20px] size-[20px] transition-all duration-300"
+              fill="#003450"
+              viewBox="0 0 448 512">
+              <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" />
+            </svg>
+          </h3>
+          <div class="faq-answer normal-case overflow-hidden duration-500 transition-all max-h-0">
+            <p class="text-[#003450]/80 text-[18px] pt-[10px]">
+              {item.respuesta}
+            </p>
           </div>
-        ))
-      }
-    </div>
+        </div>
+      ))
+    }
+  </div>
 </section>
 
 <script is:inline>
   const faqItems = document.querySelectorAll(".faq-item");
 
-  faqItems.forEach(item => {
+  faqItems.forEach((item) => {
     const question = item.querySelector(".faq-question");
     const answer = item.querySelector(".faq-answer");
     const icon = item.querySelector(".faq-icon");
@@ -65,8 +79,12 @@ const faqs = [
     question.addEventListener("click", () => {
       const isOpen = answer.classList.contains("max-h-[2000px]");
 
-      document.querySelectorAll(".faq-answer").forEach(ans => ans.classList.remove("max-h-[2000px]"));
-      document.querySelectorAll(".faq-icon").forEach(i => i.classList.remove("rotate-45"));
+      document
+        .querySelectorAll(".faq-answer")
+        .forEach((ans) => ans.classList.remove("max-h-[2000px]"));
+      document
+        .querySelectorAll(".faq-icon")
+        .forEach((i) => i.classList.remove("rotate-45"));
 
       if (!isOpen) {
         answer.classList.add("max-h-[2000px]");
