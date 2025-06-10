@@ -2,7 +2,11 @@
   <div class="tcp-container border-b border-white/20 py-4">
     <div class="flex justify-between items-center">
       <a href="/">
-        <img class="h-[50px] w-[187px]" src="/images/clini-store-logo.webp" alt="Clini Store" />
+        <img
+          class="h-[50px] w-[187px]"
+          src="/images/clini-store-logo.webp"
+          alt="Clini Store"
+        />
       </a>
 
       <!-- Botón hamburguesa para mobile  -->
@@ -11,33 +15,75 @@
         onclick="document.getElementById('mobile-menu')?.classList.toggle('hidden')"
         aria-label="Abrir menú"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2"
-          viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M4 6h16M4 12h16M4 18h16" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </button>
 
       <!-- Menú desktop -->
       <nav class="hidden md:flex gap-8 list-none text-[#02669A]">
-        <li><a href="#!">Quienes somos</a></li>
+        <li><a href="/#quienes-somos">Quienes somos</a></li>
         <li class="group relative">
-          <button
-            class="block text-left w-full"
+          <button class="block text-left w-full"> Servicios </button>
+          <ul
+            class="group-hover:flex absolute top-[100%] left-0 w-[250px] bg-white z-50 px-4 flex-col hidden"
           >
-            Servicios
-          </button>
-          <ul class="group-hover:flex absolute top-[100%] left-0 w-[250px] bg-white z-50 px-4 flex-col hidden">
-            <li><a class="block p-4 border-b border-[#111]/30" href="#alimentos-y-nutricion">Alimentos y nutrición</a></li>
-            <li><a class="block p-4 border-b border-[#111]/30" href="#clinica-veterinaria">Clínica veterinaria</a></li>
-            <li><a class="block p-4 border-b border-[#111]/30" href="#farmacia-veterinaria">Farmacia veterinaria</a></li>
-            <li><a class="block p-4 border-b border-[#111]/30" href="#golosinas">Golosinas</a></li>
-            <li><a class="block p-4 border-b border-[#111]/30" href="#juguetes">Juguetes</a></li>
-            <li><a class="block p-4 border-b border-[#111]/30" href="#peluqueria-e-higiene">Peluquería e higiene</a></li>
-            <li><a class="block p-4 border-b border-[#111]/30" href="#sucursales">Sucursales</a></li>
-            <li><a class="block p-4" href="#tramites-y-accesorios">Trámites y accesorios</a></li>
+            <li>
+              <a
+                class="block p-4 border-b border-[#111]/30"
+                href="/alimentos-y-nutricion">Alimentos y nutrición</a
+              >
+            </li>
+            <li>
+              <a
+                class="block p-4 border-b border-[#111]/30"
+                href="/clinica-veterinaria">Clínica veterinaria</a
+              >
+            </li>
+            <li>
+              <a
+                class="block p-4 border-b border-[#111]/30"
+                href="/farmacia-veterinaria">Farmacia veterinaria</a
+              >
+            </li>
+            <li>
+              <a class="block p-4 border-b border-[#111]/30" href="/golosinas"
+                >Golosinas</a
+              >
+            </li>
+            <li>
+              <a class="block p-4 border-b border-[#111]/30" href="/juguetes"
+                >Juguetes</a
+              >
+            </li>
+            <li>
+              <a
+                class="block p-4 border-b border-[#111]/30"
+                href="/peluqueria-e-higiene">Peluquería e higiene</a
+              >
+            </li>
+            <li>
+              <a class="block p-4 border-b border-[#111]/30" href="/sucursales"
+                >Sucursales</a
+              >
+            </li>
+            <li>
+              <a class="block p-4" href="/tramites-y-accesorios"
+                >Trámites y accesorios</a
+              >
+            </li>
           </ul>
         </li>
-        <li><a href="#!">Sucursales</a></li>
+        <li><a href="/#sucursales">Sucursales</a></li>
       </nav>
     </div>
 
@@ -46,20 +92,40 @@
       <ul class="flex flex-col gap-4 text-[#02669A]">
         <li><a href="#!" class="block">Quienes somos</a></li>
         <li class="group relative">
-          <button
-            class="block text-left w-full"
+          <button class="block text-left w-full"> Servicios </button>
+          <ul
+            class="group-hover:flex w-full bg-white z-50 px-4 flex-col hidden"
           >
-            Servicios
-          </button>
-          <ul class="group-hover:flex w-full bg-white z-50 px-4 flex-col hidden">
-            <li><a class="block px-2 py-4" href="/alimentos-y-nutricion">Alimentos y nutrición</a></li>
-            <li><a class="block px-2 py-4" href="/clinica-veterinaria">Clínica veterinaria</a></li>
-            <li><a class="block px-2 py-4" href="/farmacia-veterinaria">Farmacia veterinaria</a></li>
+            <li>
+              <a class="block px-2 py-4" href="/alimentos-y-nutricion"
+                >Alimentos y nutrición</a
+              >
+            </li>
+            <li>
+              <a class="block px-2 py-4" href="/clinica-veterinaria"
+                >Clínica veterinaria</a
+              >
+            </li>
+            <li>
+              <a class="block px-2 py-4" href="/farmacia-veterinaria"
+                >Farmacia veterinaria</a
+              >
+            </li>
             <li><a class="block px-2 py-4" href="/golosinas">Golosinas</a></li>
             <li><a class="block px-2 py-4" href="/juguetes">Juguetes</a></li>
-            <li><a class="block px-2 py-4" href="/peluqueria-e-higiene">Peluquería e higiene</a></li>
-            <li><a class="block px-2 py-4" href="/sucursales">Sucursales</a></li>
-            <li><a class="block px-2 py-4" href="/tramites-y-accesorios">Trámites y accesorios</a></li>
+            <li>
+              <a class="block px-2 py-4" href="/peluqueria-e-higiene"
+                >Peluquería e higiene</a
+              >
+            </li>
+            <li>
+              <a class="block px-2 py-4" href="/sucursales">Sucursales</a>
+            </li>
+            <li>
+              <a class="block px-2 py-4" href="/tramites-y-accesorios"
+                >Trámites y accesorios</a
+              >
+            </li>
           </ul>
         </li>
         <li><a href="/sucursales" class="block">Sucursales</a></li>
