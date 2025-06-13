@@ -4,13 +4,23 @@ const brands = [
   { name: "Pro Plan", logo: "/images/marcas/pro-plan.webp" },
   { name: "Purina", logo: "/images/marcas/purina.webp" },
   { name: "Eukanuba", logo: "/images/marcas/eukanuba.png" },
-  { name: "Kong", logo: "/images/marcas/kong.webp" },
   { name: "Mon Ami", logo: "/images/marcas/mon-ami.webp" },
-  { name: "Dingo", logo: "/images/marcas/dingo.webp" },
   { name: "Can Cat", logo: "/images/marcas/can-cat.webp" },
   { name: "Purina Excellent", logo: "/images/marcas/purina-excelent.webp" },
   { name: "Old Prince", logo: "/images/marcas/old-prince.webp" },
+  { name: "Unik", logo: "/images/marcas/unik.webp" },
+  { name: "Trixie", logo: "/images/marcas/trixie.webp" },
+  { name: "Cocooning", logo: "/images/marcas/cocooning.webp" },
+  // { name: "Animal Pet", logo: "/images/marcas/animal-pet.webp" },
+  { name: "Golocan", logo: "/images/marcas/golocan.webp" },
+  { name: "Brakko", logo: "/images/marcas/brakko.webp" },
+  { name: "Nexgard", logo: "/images/marcas/nexgard.webp" },
+  // { name: "Advantage", logo: "/images/marcas/advantage.webp" },
+  { name: "MyFamily", logo: "/images/marcas/myfamily.webp" },
 ];
+
+// - Animal Pet
+// - Advantage
 
 // InfiniteSlider props equivalent
 const gap = 24; // gap between items in pixels
@@ -45,7 +55,7 @@ const infiniteBrands = [...brands, ...brands, ...brands, ...brands];
                 src={brand.logo}
                 alt={brand.name}
                 class="aspect-square w-[120px] md:w-[140px] h-[120px] md:h-[140px] object-contain rounded-lg bg-white p-4 shadow-lg hover:shadow-xl transition-shadow duration-300 filter grayscale hover:grayscale-0"
-                loading="lazy"
+                loading="eager"
               />
             </div>
           ))
