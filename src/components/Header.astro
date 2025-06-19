@@ -101,39 +101,72 @@
     <!-- Menú mobile -->
     <div id="mobile-menu" class="md:hidden hidden mt-4">
       <ul class="flex flex-col gap-4 text-[#02669A]">
-        <li><a href="#!" class="block">Quienes somos</a></li>
+        <li><a href="/#quienes-somos" class="block">Quienes somos</a></li>
         <li class="group relative">
-          <button class="block text-left w-full"> Servicios </button>
+          <button
+            id="mobile-services-toggle"
+            class="text-left w-full flex items-center justify-between"
+          >
+            Servicios
+            <svg
+              id="mobile-submenu-icon"
+              class="min-w-[20px] size-[12px] transition-all duration-300"
+              fill="#02669A"
+              viewBox="0 0 448 512"
+            >
+              <path
+                d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+              ></path>
+            </svg>
+          </button>
           <ul
-            class="group-hover:flex w-full bg-white z-50 px-4 flex-col hidden"
+            id="mobile-submenu"
+            class="w-full bg-white/90 z-50 px-4 flex-col hidden mt-2 rounded-md"
           >
             <li>
-              <a class="block px-2 py-4" href="/alimentos-y-nutricion"
-                >Alimentos y nutrición</a
+              <a
+                class="block px-2 py-3 border-b border-[#111]/20"
+                href="/alimentos-y-nutricion">Alimentos y nutrición</a
               >
             </li>
             <li>
-              <a class="block px-2 py-4" href="/clinica-veterinaria"
-                >Clínica veterinaria</a
+              <a
+                class="block px-2 py-3 border-b border-[#111]/20"
+                href="/clinica-veterinaria">Clínica veterinaria</a
               >
             </li>
             <li>
-              <a class="block px-2 py-4" href="/farmacia-veterinaria"
-                >Farmacia veterinaria</a
-              >
-            </li>
-            <li><a class="block px-2 py-4" href="/golosinas">Golosinas</a></li>
-            <li><a class="block px-2 py-4" href="/juguetes">Juguetes</a></li>
-            <li>
-              <a class="block px-2 py-4" href="/peluqueria-e-higiene"
-                >Peluquería e higiene</a
+              <a
+                class="block px-2 py-3 border-b border-[#111]/20"
+                href="/farmacia-veterinaria">Farmacia veterinaria</a
               >
             </li>
             <li>
-              <a class="block px-2 py-4" href="/sucursales">Sucursales</a>
+              <a
+                class="block px-2 py-3 border-b border-[#111]/20"
+                href="/golosinas">Golosinas</a
+              >
             </li>
             <li>
-              <a class="block px-2 py-4" href="/tramites-y-accesorios"
+              <a
+                class="block px-2 py-3 border-b border-[#111]/20"
+                href="/juguetes">Juguetes</a
+              >
+            </li>
+            <li>
+              <a
+                class="block px-2 py-3 border-b border-[#111]/20"
+                href="/peluqueria-e-higiene">Peluquería e higiene</a
+              >
+            </li>
+            <li>
+              <a
+                class="block px-2 py-3 border-b border-[#111]/20"
+                href="/sucursales">Sucursales</a
+              >
+            </li>
+            <li>
+              <a class="block px-2 py-3" href="/tramites-y-accesorios"
                 >Trámites y accesorios</a
               >
             </li>
@@ -144,3 +177,24 @@
     </div>
   </div>
 </header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById("mobile-services-toggle");
+    const submenu = document.getElementById("mobile-submenu");
+    const icon = document.getElementById("mobile-submenu-icon");
+
+    if (toggle) {
+      toggle.addEventListener("click", function () {
+        if (submenu) {
+          submenu.classList.toggle("hidden");
+          submenu.classList.toggle("flex");
+        }
+
+        if (icon) {
+          icon.classList.toggle("rotate-45");
+        }
+      });
+    }
+  });
+</script>
