@@ -1,0 +1,71 @@
+---
+interface Props {
+  name: string;
+  address: string;
+  phone: string;
+  whatsapp: string;
+  mapEmbed: string;
+  isWide: boolean;
+  horarios: string;
+  isDark?: boolean;
+}
+
+const {
+  name,
+  address,
+  phone,
+  whatsapp,
+  mapEmbed,
+  isWide,
+  horarios,
+  isDark = false,
+} = Astro.props;
+---
+
+<div
+  class={`rounded-lg overflow-clip ${isDark ? "bg-[#02669A]" : "bg-white"} ${isWide ? "md:col-span-2 md:flex" : ""}`}
+>
+  <div
+    class={`bg-gray-300 ${isWide ? "md:w-[calc(100%-64px)] h-[200px] md:h-full" : "h-[200px] md:h-[260px]"}`}
+  >
+    <iframe
+      class="w-full h-full"
+      src={mapEmbed}
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title={`Mapa de ${name}`}></iframe>
+  </div>
+  <div class="px-4 py-6 md:py-8">
+    <h4
+      class={`${isDark ? "text-white" : "text-[#003450]"} text-[18px] md:text-[20px] font-semibold leading-tight`}
+    >
+      {name}
+    </h4>
+    <p
+      class={`${isDark ? "text-white/80" : "text-[#003450]/80"} mt-2 text-[16px] md:text-[18px] leading-relaxed`}
+    >
+      {address}
+    </p>
+    <p
+      class={`${isDark ? "text-white/80" : "text-[#003450]/80"} mt-4 text-[16px] md:text-[18px] leading-relaxed`}
+    >
+      <span class="flex items-center gap-1">
+        {horarios}
+      </span>
+    </p>
+    <p
+      class={`${isDark ? "text-white/80" : "text-[#003450]/80"} mt-4 text-[16px] md:text-[18px]`}
+    >
+      Tel.:{" "}
+      <a
+        href={`https://wa.me/${whatsapp}?text=Hola!%20Me%20interesa%20coordinar%20una%20consulta%20en%20${encodeURIComponent(name)}`}
+        target="_blank"
+        class={`underline ${isDark ? "hover:text-white" : "hover:text-[#003450]"} transition-colors`}
+      >
+        {phone}
+      </a>
+    </p>
+  </div>
+</div>

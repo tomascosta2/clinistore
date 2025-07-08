@@ -1,66 +1,10 @@
 ---
 import ReviewsModule from "../../components/Elements/ReviewsModule.astro";
+import SucursalCard from "../../components/Elements/SucursalCard.astro";
 import Footer from "../../components/Footer.astro";
 import Header from "../../components/Header.astro";
 import Layout from "../../layouts/Layout.astro";
-
-const branches = [
-  {
-    id: "remeros-plaza",
-    name: "Shopping Remeros Plaza",
-    address:
-      "Av. Sta. María de las Conchas 4711 1160, B1624 Tigre, Provincia de Buenos Aires, Argentina",
-    phone: "11 6143-9669",
-    wpp: "https://wa.me/1161439669?text=Hola!%20Me%20interesa%20coordinar%20una%20consulta%20en%20Shopping%20Remeros%20Plaza",
-    mapUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3290.9888632913885!2d-58.612081!3d-34.427037999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca69fb83732d1%3A0xfa5255b3fee0a006!2sRemeros%20Plaza!5e0!3m2!1ses-419!2sar!4v1748891535715!5m2!1ses-419!2sar",
-    isWide: false,
-  },
-  {
-    id: "north-coral-nordelt",
-    name: "Edificio North Coral Nordelt",
-    address:
-      "Blvd. de la Pl. 105, Rincón de Milberg, Provincia de Buenos Aires, Argentina",
-    phone: "11 5160-0962",
-    wpp: "https://wa.me/1151600962?text=Hola!%20Me%20interesa%20coordinar%20una%20consulta%20en%20Edificio%20North%20Coral%20Nordelta",
-    mapUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3292.000576306289!2d-58.65491762488441!3d-34.40133127302744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca14ebcdc21e5%3A0x9f21f82581929962!2sBlvd.%20de%20la%20Pl.%20105%2C%20B1670%20Tigre%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1748891605077!5m2!1ses-419!2sar",
-    isWide: false,
-  },
-  {
-    id: "delta-point",
-    name: "Suc. Delta Point",
-    address:
-      "Av. Sta. María de las Conchas 5555, Rincón de Milberg, Provincia de Buenos Aires",
-    phone: "11 2530-3727",
-    wpp: "https://wa.me/1125303727?text=Hola!%20Me%20interesa%20coordinar%20una%20consulta",
-    mapUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3291.935304763721!2d-58.63332602488434!3d-34.40299027302695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca6a43839c9ed%3A0x3b2d65516911461!2sAv.%20Sta.%20Mar%C3%ADa%20de%20las%20Conchas%205555-5599%2C%20B1670%20Rinc%C3%B3n%20de%20Milberg%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1748891646429!5m2!1ses-419!2sar",
-    isWide: false,
-  },
-  {
-    id: "vila-terra-center",
-    name: "Suc. Vila Terra Center Villanueva",
-    address:
-      "Blvd. de Todos los Santos 100, B1623 Tigre, Provincia de Buenos Aires, Argentina",
-    phone: "11 2479-0893",
-    wpp: "https://wa.me/1124790893?text=Hola!%20Me%20interesa%20coordinar%20una%20consulta%20en%20Suc.%20Vila%20Terra%20Center%20Villanueva",
-    mapUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3292.3974536251267!2d-58.71709472488488!3d-34.39124237303121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca03562127581%3A0xddc397130623c17a!2sBlvd.%20de%20Todos%20los%20Santos%20100%2C%20B1623%20Dique%20Luj%C3%A1n%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1748891679797!5m2!1ses-419!2sar",
-    isWide: false,
-  },
-  {
-    id: "altos-del-encuentro",
-    name: "Suc. Altos del Encuentro",
-    address:
-      "Av. Gral. Juan Domingo Perón 4187, Benavidez, Provincia de Buenos Aires, Argentina",
-    phone: "11 2357-7934",
-    wpp: "https://wa.me/1123577934?text=Hola!%20Me%20interesa%20coordinar%20una%20consulta%20en%20Suc.%20Altos%20del%20Encuentro",
-    mapUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3290.5441213673485!2d-58.684502824882586!3d-34.438333173013945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca3cf36ac8a55%3A0x48a1c427c6a2c0b4!2sAv.%20Gral.%20Juan%20Domingo%20Per%C3%B3n%204187%2C%20B1617%20Benavidez%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1748891709543!5m2!1ses-419!2sar",
-    isWide: true,
-  },
-];
+import { sucursales } from "../../data/sucursales.astro";
 ---
 
 <Layout>
@@ -83,45 +27,8 @@ const branches = [
         class="md:w-[840px] w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 px-4 md:px-0"
       >
         {
-          branches.map((branch) => (
-            <div
-              class={`rounded-lg overflow-clip bg-white ${
-                branch.isWide ? "md:col-span-2 md:flex" : ""
-              }`}>
-              <div
-                class={`bg-gray-300 ${
-                  branch.isWide
-                    ? "md:w-[calc(100%-64px)] h-[200px] md:h-full"
-                    : "h-[200px] md:h-[260px]"
-                }`}>
-                <iframe
-                  class="w-full h-full"
-                  src={branch.mapUrl}
-                  style="border:0;"
-                  allowfullscreen=""
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                  title={`Mapa de ${branch.name}`}
-                />
-              </div>
-              <div class="px-4 py-6 md:py-8">
-                <h4 class="text-[#003450] text-[18px] md:text-[20px] font-semibold leading-tight">
-                  {branch.name}
-                </h4>
-                <p class="text-[#003450]/80 mt-2 text-[16px] md:text-[18px] leading-relaxed">
-                  {branch.address}
-                </p>
-                <p class="text-[#003450]/80 mt-4 text-[16px] md:text-[18px]">
-                  Tel.:{" "}
-                  <a
-                    href={branch.wpp}
-                    target="_blank"
-                    class="underline hover:text-[#003450]/80 transition-colors">
-                    {branch.phone}
-                  </a>
-                </p>
-              </div>
-            </div>
+          sucursales.map((branch) => (
+            <SucursalCard {...branch} isDark={false} />
           ))
         }
       </div>
