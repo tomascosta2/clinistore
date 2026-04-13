@@ -4,12 +4,12 @@ import type { APIRoute } from 'astro';
 import nodemailer from 'nodemailer';
 
 export const POST: APIRoute = async ({ request }) => {
-  const data = await request.formData();
-  const nombre = data.get('nombre')?.toString().trim() ?? '';
-  const email = data.get('email')?.toString().trim() ?? '';
-  const telefono = data.get('telefono')?.toString().trim() ?? '';
-  const ciudad = data.get('ciudad')?.toString().trim() ?? '';
-  const mensaje = data.get('mensaje')?.toString().trim() ?? '';
+  const data = await request.json();
+  const nombre = (data.nombre ?? '').trim();
+  const email = (data.email ?? '').trim();
+  const telefono = (data.telefono ?? '').trim();
+  const ciudad = (data.ciudad ?? '').trim();
+  const mensaje = (data.mensaje ?? '').trim();
 
   if (!nombre || !email || !telefono || !ciudad) {
     return new Response(JSON.stringify({ ok: false, error: 'Completá todos los campos obligatorios.' }), {

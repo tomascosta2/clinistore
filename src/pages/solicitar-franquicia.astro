@@ -118,9 +118,11 @@ import Footer from "../components/Footer.astro";
     feedback.classList.add('hidden');
 
     try {
+      const formData = new FormData(form);
       const res = await fetch('/api/franquicia', {
         method: 'POST',
-        body: new FormData(form),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(Object.fromEntries(formData)),
       });
       const json = await res.json();
 
